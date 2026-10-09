@@ -1,4 +1,4 @@
-# Elkin Skills — Instalación
+# Elkin Fruto - Skills — Instalación
 
 Guía para instalar las skills personalizadas de **Spec-Driven Development (SDD)** del repositorio [`efruto/elkin-skills`](https://github.com/efruto/elkin-skills) en cualquier proyecto compatible.
 

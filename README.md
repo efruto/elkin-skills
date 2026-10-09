@@ -128,11 +128,14 @@ Revisa la especificación generada y resuelve las preguntas pendientes antes de 
 Cuando la especificación esté revisada, solicita utilizar `spec-impl`:
 
 ```text
-/spec-impl Utiliza la skill spec-impl para implementar
+Utiliza la skill spec-impl para implementar
 specs/01-recuperacion-contrasena.md.
 Ejecuta las pruebas disponibles y documenta los resultados reales.
 ```
-
+o 
+```text
+spec-impl specs/01-recuperacion-contrasena.md.
+```
 Cambia la ruta por la ubicación y el nombre reales del archivo de especificación.
 
 ### 3. Revisar los resultados

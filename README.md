@@ -1,4 +1,4 @@
-# Elkin Skills — Instalación
+# Elkin Fruto - Skills — Instalación
 
 Skills personalizadas de **Spec-Driven Development (SDD)** para asistentes de programación basados en agentes de IA. Este repositorio está pensado para proyectos que utilizan herramientas como **OpenCode, Claude Code, Cursor, Codex** y otros agentes compatibles con el formato de skills.
 
@@ -111,12 +111,12 @@ La disponibilidad global depende de que el agente sea compatible y descubra la u
 
 ## Flujo de trabajo recomendado
 
-### 1. Generar una especificación
+### 1. Generar una especificación desde la terminar de OpenCode o Claude Code
 
 Desde el agente de IA, solicita utilizar `spec`. Por ejemplo:
 
 ```text
-Utiliza la skill spec para analizar el proyecto y generar
+/spec Utiliza la skill spec para analizar el proyecto y generar
 una especificación para la funcionalidad de recuperación de contraseña.
 No implementes código todavía.
 ```
@@ -128,7 +128,7 @@ Revisa la especificación generada y resuelve las preguntas pendientes antes de 
 Cuando la especificación esté revisada, solicita utilizar `spec-impl`:
 
 ```text
-Utiliza la skill spec-impl para implementar
+/spec-impl Utiliza la skill spec-impl para implementar
 specs/01-recuperacion-contrasena.md.
 Ejecuta las pruebas disponibles y documenta los resultados reales.
 ```

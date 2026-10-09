@@ -1,6 +1,17 @@
-# Elkin Fruto - Skills — Instalación
+# Elkin Skills — Instalación
 
-Guía para instalar las skills personalizadas de **Spec-Driven Development (SDD)** del repositorio [`efruto/elkin-skills`](https://github.com/efruto/elkin-skills) en cualquier proyecto compatible.
+Skills personalizadas de **Spec-Driven Development (SDD)** para asistentes de programación basados en agentes de IA. Este repositorio está pensado para proyectos que utilizan herramientas como **OpenCode, Claude Code, Cursor, Codex** y otros agentes compatibles con el formato de skills.
+
+Guía para instalar las skills del repositorio [`efruto/elkin-skills`](https://github.com/efruto/elkin-skills) en cualquier proyecto compatible.
+
+## ¿Para qué sirven?
+
+Estas skills proporcionan instrucciones reutilizables a los agentes de IA durante el ciclo de desarrollo de software:
+
+- **`spec`**: analiza una solicitud y define una especificación antes de programar.
+- **`spec-impl`**: implementa una especificación existente y verifica los resultados.
+
+Las skills no son una aplicación independiente ni reemplazan al agente de programación. Son instrucciones que un agente compatible puede utilizar para seguir un flujo de trabajo consistente y trazable.
 
 ## Requisitos previos
 

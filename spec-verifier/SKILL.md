@@ -1,17 +1,9 @@
 ---
 name: spec-verifier
 description: Verifies acceptance criteria in spec files by checking implementation against requirements using Context7 for multi-framework validation, automated build/test checks, and visual inspection. Works in current branch, only verifies (no code modifications), and automatically updates the spec file with verification results.
-mode: subagent
-#model: opencode-go/qwen3.7-plus
-permission:
-  edit: allow
-  bash: allow
-  read: allow
-  glob: allow
-  grep: allow
-  task: allow
-  webfetch: allow
-  websearch: allow
+disable-model-invocation: true
+argument-hint: <NN-spec-name>
+allowed-tools: Read, Glob, Grep, Edit, Write, AskUserQuestion, Bash(git status:*), Bash(git branch:*), Bash(git checkout:*), Bash(git log:*), Bash(git diff:*), Bash(git stash:*), Bash(cat:*), Bash(ls:*)
 ---
 
 # /spec-verifier — Verifier of spec acceptance criteria

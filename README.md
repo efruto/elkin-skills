@@ -55,10 +55,18 @@ npx skills add https://github.com/efruto/elkin-skills --skill spec
 npx skills add https://github.com/efruto/elkin-skills --skill spec-impl
 ```
 
+### Instalar únicamente `spec-verifier`
+
+```bash
+npx skills add https://github.com/efruto/elkin-skills --skill spec-verifier
+```
+
+
+
 ### Instalar ambas skills
 
 ```bash
-npx skills add https://github.com/efruto/elkin-skills --skill spec --skill spec-impl
+npx skills add https://github.com/efruto/elkin-skills --skill spec --skill spec-impl --skill spec-verifier
 ```
 
 ### Consultar las skills disponibles
@@ -74,7 +82,7 @@ Durante la instalación, revisa las opciones que presente la CLI y selecciona el
 Para solicitar la instalación dirigida a OpenCode:
 
 ```bash
-npx skills add https://github.com/efruto/elkin-skills --skill spec --skill spec-impl --agent opencode
+npx skills add https://github.com/efruto/elkin-skills --skill spec --skill spec-impl --skill spec-verifier --agent opencode
 ```
 
 Las opciones disponibles pueden variar según la versión de la CLI. Si el instalador muestra una confirmación, revisa el destino antes de aceptarla.
@@ -92,6 +100,8 @@ mi-proyecto/
 │       │   └── template.md
 │       └── spec-impl/
 │           └── SKILL.md
+│       └── spec-verifier/
+│           └── SKILL.md
 ├── src/
 ├── tests/
 └── README.md
@@ -104,7 +114,7 @@ Verifica que existan los archivos `SKILL.md` y que el agente utilizado reconozca
 Si quieres instalar las skills para utilizarlas en varios proyectos de tu usuario, puedes solicitar una instalación global:
 
 ```bash
-npx skills add https://github.com/efruto/elkin-skills --skill spec --skill spec-impl --agent opencode --global
+npx skills add https://github.com/efruto/elkin-skills --skill spec --skill spec-impl --skill spec-verifier --agent opencode --global
 ```
 
 La disponibilidad global depende de que el agente sea compatible y descubra la ubicación global de skills. Para equipos o proyectos que deban reproducir exactamente su entorno, se recomienda la instalación por proyecto.
@@ -135,6 +145,9 @@ Ejecuta las pruebas disponibles y documenta los resultados reales.
 o 
 ```text
 spec-impl specs/01-recuperacion-contrasena.md.
+```
+```text
+spec-verifier specs/01-recuperacion-contrasena.md.
 ```
 Cambia la ruta por la ubicación y el nombre reales del archivo de especificación.
 
@@ -173,6 +186,7 @@ Si quieres utilizar comandos como:
 ```text
 /spec specs/01-recuperacion-contrasena.md
 /spec-impl specs/01-recuperacion-contrasena.md
+/spec-verifier specs/01-recuperacion-contrasena.md
 ```
 
 configura por separado los comandos de OpenCode para que invoquen o sigan las instrucciones de las skills instaladas. La configuración exacta depende de la versión y de la estructura del proyecto.
@@ -181,7 +195,7 @@ configura por separado los comandos de OpenCode para que invoquen o sigan las in
 
 - **No se encuentra una skill:** comprueba el nombre indicado en `--skill`, la estructura del repositorio y la ubicación donde se instaló.
 - **El agente no reconoce la skill:** verifica que el agente sea compatible y que esté configurado para descubrir el directorio de destino.
-- **No aparece `/spec` o `/spec-impl`:** recuerda que instalar skills no crea necesariamente comandos de barra; configura esos comandos por separado si los necesitas.
+- **No aparece `/spec` o `/spec-impl` o `/spec-verifier`:** recuerda que instalar skills no crea necesariamente comandos de barra; configura esos comandos por separado si los necesitas.
 - **La actualización no funciona:** consulta `npx skills --help` y confirma que las skills fueron instaladas con la CLI.
 - **El repositorio no es accesible:** comprueba que la URL de GitHub sea correcta y que el repositorio sea público, o configura la autenticación necesaria si es privado.
 

@@ -209,7 +209,31 @@ Next step: verify the spec's acceptance criteria one by one.
 If they all pass, update the spec's state to "Implemented" (or the equivalent
 in your repo's language) and make the final commit before merging this branch.
 ```
+---
+### Phase 5 — Code Documentation Standards
+When implementing code in any programming language, follow these documentation standards:
 
+- File-level documentation: Add a descriptive comment block at the beginning of each new source file or library, explaining its purpose, responsibilities, author, and required dependencies when applicable.
+
+- Function and class documentation: Add a descriptive comment block immediately above every newly created function, method, class, interface, or other significant code component, explaining its purpose, responsibilities, business logic, edge cases, parameters, return values, and non-obvious behavior.
+
+- Language-specific conventions: Use the documentation format recommended for the programming language and framework, such as JSDoc for JavaScript and TypeScript, PHPDoc for PHP, JavaDoc for Java, docstrings for Python, or equivalent standards for other languages.
+
+- Documentation tags: Include appropriate standard tags supported by the language, such as @author [Ejemplo: Nombre - correo@ejemplo.com], @param, @returns, and @throws, where applicable. Do not force tags that are not supported or customary in the language.
+
+- Documentation quality and language: Write descriptive comments and docstrings in Spanish. Keep them concise, accurate, and focused on business logic, edge cases, parameters, and return values. Maintain technical identifiers (variables, functions, classes) in English according to project standards.
+
+**Anti-noise and over-commenting rules:**
+
+- Focus on "WHY", not "WHAT": Comments must explain the intent, business decisions, architectural constraints, or complex algorithms—never restate what the code self-evidently performs.
+
+- Self-documenting code first: Rely on expressive function, variable, and class names instead of inline comments. If code requires a comment to explain its basic line-by-line mechanics, refactor the code first.
+
+- No trivial comments: Strictly avoid comments on straightforward assignments, basic loops, standard imports, getters/setters, or simple helper routines.
+
+- No redundant docstrings: Do not add docstrings to trivial helper functions where parameter types and names make the functionality self-evident, unless required by explicit project guidelines.
+
+Examples of Good vs. Bad commenting:
 ---
 
 ## Summary of expected behavior

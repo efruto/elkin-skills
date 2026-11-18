@@ -10,6 +10,8 @@ Estas skills proporcionan instrucciones reutilizables a los agentes de IA durant
 
 - **`spec`**: analiza una solicitud y define una especificación antes de programar.
 - **`spec-impl`**: implementa una especificación existente y verifica los resultados.
+- **`spec-verifier`**: Verifica los criterios de aceptación de las Specs.
+- **`database-schema-designer`**: Analiza una solicitud y define el esquema de base de datos.
 
 Las skills no son una aplicación independiente ni reemplazan al agente de programación. Son instrucciones que un agente compatible puede utilizar para seguir un flujo de trabajo consistente y trazable.
 
@@ -61,12 +63,18 @@ npx skills add https://github.com/efruto/elkin-skills --skill spec-impl
 npx skills add https://github.com/efruto/elkin-skills --skill spec-verifier
 ```
 
+### Instalar únicamente `database-schema-designer`
+
+```bash
+npx skills add https://github.com/efruto/elkin-skills --skill database-schema-designer
+```
+
 
 
 ### Instalar ambas skills
 
 ```bash
-npx skills add https://github.com/efruto/elkin-skills --skill spec --skill spec-impl --skill spec-verifier
+npx skills add https://github.com/efruto/elkin-skills --skill spec --skill spec-impl --skill spec-verifier --skill database-schema-designer
 ```
 
 ### Consultar las skills disponibles
@@ -82,7 +90,7 @@ Durante la instalación, revisa las opciones que presente la CLI y selecciona el
 Para solicitar la instalación dirigida a OpenCode:
 
 ```bash
-npx skills add https://github.com/efruto/elkin-skills --skill spec --skill spec-impl --skill spec-verifier --agent opencode
+npx skills add https://github.com/efruto/elkin-skills --skill spec --skill spec-impl --skill spec-verifier --skill database-schema-designer --agent opencode
 ```
 
 Las opciones disponibles pueden variar según la versión de la CLI. Si el instalador muestra una confirmación, revisa el destino antes de aceptarla.
@@ -102,6 +110,8 @@ mi-proyecto/
 │           └── SKILL.md
 │       └── spec-verifier/
 │           └── SKILL.md
+│       └── database-schema-designer/
+│           └── SKILL.md
 ├── src/
 ├── tests/
 └── README.md
@@ -114,7 +124,7 @@ Verifica que existan los archivos `SKILL.md` y que el agente utilizado reconozca
 Si quieres instalar las skills para utilizarlas en varios proyectos de tu usuario, puedes solicitar una instalación global:
 
 ```bash
-npx skills add https://github.com/efruto/elkin-skills --skill spec --skill spec-impl --skill spec-verifier --agent opencode --global
+npx skills add https://github.com/efruto/elkin-skills --skill spec --skill spec-impl --skill spec-verifier --skill database-schema-designer --agent opencode --global
 ```
 
 La disponibilidad global depende de que el agente sea compatible y descubra la ubicación global de skills. Para equipos o proyectos que deban reproducir exactamente su entorno, se recomienda la instalación por proyecto.
@@ -150,6 +160,9 @@ spec-impl specs/01-recuperacion-contrasena.md.
 spec-verifier specs/01-recuperacion-contrasena.md.
 ```
 Cambia la ruta por la ubicación y el nombre reales del archivo de especificación.
+```text
+database-schema-designer prompt del contexto de la solicitud.
+```
 
 ### 3. Revisar los resultados
 

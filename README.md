@@ -8,10 +8,14 @@ Guía para instalar las skills del repositorio [`efruto/elkin-skills`](https://g
 
 Estas skills proporcionan instrucciones reutilizables a los agentes de IA durante el ciclo de desarrollo de software:
 
-- **`spec`**: analiza una solicitud y define una especificación antes de programar.
-- **`spec-impl`**: implementa una especificación existente y verifica los resultados.
-- **`spec-verifier`**: Verifica los criterios de aceptación de las Specs.
-- **`database-schema-designer`**: Analiza una solicitud y define el esquema de base de datos.
+## Skills disponibles
+
+| Skill | Propósito |
+|---|---|
+| `spec` | Analiza una solicitud y genera una especificación funcional y técnica verificable antes de implementar. |
+| `spec-impl` | Implementa una especificación existente, ejecuta las comprobaciones disponibles y documenta los resultados. |
+| `spec-verifier` | Verifica los criterios de aceptación de las Specs. |
+| `database-schema-designer` | Analiza una solicitud y define el esquema de base de datos. |
 
 Las skills no son una aplicación independiente ni reemplazan al agente de programación. Son instrucciones que un agente compatible puede utilizar para seguir un flujo de trabajo consistente y trazable.
 
@@ -29,13 +33,6 @@ node --version
 npm --version
 git --version
 ```
-
-## Skills disponibles
-
-| Skill | Propósito |
-|---|---|
-| `spec` | Analiza una solicitud y genera una especificación funcional y técnica verificable antes de implementar. |
-| `spec-impl` | Implementa una especificación existente, ejecuta las comprobaciones disponibles y documenta los resultados. |
 
 ## Instalar en un proyecto
 
@@ -68,8 +65,6 @@ npx skills add https://github.com/efruto/elkin-skills --skill spec-verifier
 ```bash
 npx skills add https://github.com/efruto/elkin-skills --skill database-schema-designer
 ```
-
-
 
 ### Instalar ambas skills
 

@@ -154,7 +154,6 @@ spec-impl specs/01-recuperacion-contrasena.md.
 ```text
 spec-verifier specs/01-recuperacion-contrasena.md.
 ```
-Cambia la ruta por la ubicación y el nombre reales del archivo de especificación.
 ```text
 database-schema-designer prompt del contexto de la solicitud.
 ```
@@ -203,7 +202,7 @@ configura por separado los comandos de OpenCode para que invoquen o sigan las in
 
 - **No se encuentra una skill:** comprueba el nombre indicado en `--skill`, la estructura del repositorio y la ubicación donde se instaló.
 - **El agente no reconoce la skill:** verifica que el agente sea compatible y que esté configurado para descubrir el directorio de destino.
-- **No aparece `/spec` o `/spec-impl` o `/spec-verifier`:** recuerda que instalar skills no crea necesariamente comandos de barra; configura esos comandos por separado si los necesitas.
+- **No aparece `/spec` o `/spec-impl` o `/spec-verifier` o `/database-schema-designer`:** recuerda que instalar skills no crea necesariamente comandos de barra; configura esos comandos por separado si los necesitas.
 - **La actualización no funciona:** consulta `npx skills --help` y confirma que las skills fueron instaladas con la CLI.
 - **El repositorio no es accesible:** comprueba que la URL de GitHub sea correcta y que el repositorio sea público, o configura la autenticación necesaria si es privado.
 
